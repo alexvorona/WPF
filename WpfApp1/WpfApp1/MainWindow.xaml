@@ -1,0 +1,20 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Label x:Name="label1" Content="Label" HorizontalAlignment="Left" Margin="25,27,0,0" VerticalAlignment="Top"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="43,81,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Content="Close" Margin="442,288,0,0">
+            <i:Interaction.Behaviors>
+                <local:CloseBehavior/>
+            </i:Interaction.Behaviors>
+        </Button>
+        <TextBox Width="200" Height="50" local:TextBlockExtension.AllowOnlyString="True"></TextBox>
+    </Grid>
+</Window>
